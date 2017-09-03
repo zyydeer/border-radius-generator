@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Border Radius 生成器</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <div class="wrapper">
+  <div class="title">Border Radius 生成器
+  <p>请使用 px / % 单位</p></div>
+  <div class="workspace">
+    <div id="name">
+      <label for="one"> Top Left</label>
+      <input v-on:click="clearIt" type="text" id="one" v-model="one" placeholder="top left" />
+      <label for="two"> Top Right</label>
+      <input v-on:click="clearIt" type="text" id="two" v-model="two" placeholder="top right" />
+      <label for="three"> Bottom Right</label>
+      <input v-on:click="clearIt" type="text" id="three" v-model="three" placeholder="bottom right" />
+      <label for="four"> Bottom Left</label>
+      <input v-on:click="clearIt" type="text" id="four" v-model="four" placeholder="bottom left" />
+      <button v-on:click="Generate"> 生 成</button>
+      <div class="copy">{{str}}</div>
+    </div>
+    <div class="circle"></div>
+  </div>
+</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js'></script>
+<script src="js/index.js"></script>
+</body>
+</html>
